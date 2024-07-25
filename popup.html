@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="popup.js" defer></script>
+</head>
+<body class="bg-cover bg-center h-screen" style="background-image: url('./icons/background3.jpg')">
+    <div class="flex flex-col h-full">
+        <header class="bg-gray-800 bg-opacity-80 text-white p-4 shadow-lg text-center">
+            <h1 class="text-3xl font-bold">Widget Dashboard</h1>
+            <div class="flex justify-center items-center mt-4">
+                <input type="text" id="search-input" class="w-1/2 p-2 border border-gray-300 rounded-lg focus:border-green-500" placeholder="Search widgets...">
+                <button id="search-button" class="ml-2 p-2 bg-white text-green-500 rounded-lg hover:bg-gray-100 transform transition-transform duration-200">🔍</button>
+            </div>
+        </header>
+        <div class="flex flex-1">
+            <nav id="navbar" class="w-48 bg-gray-900 text-white flex-shrink-0 overflow-y-auto transform -translate-x-full animate-slide-in">
+                <ul id="widget-list" class="divide-y divide-gray-700">
+                    <!-- Widget links will be injected here by JavaScript -->
+                </ul>
+            </nav>
+            <main id="content" class="p-6 bg-white bg-opacity-80 flex-1 flex flex-wrap justify-center items-start gap-6 opacity-0 animate-fade-in">
+                <!-- Widget boxes will be displayed here -->
+            </main>
+        </div>
+        <footer class="bg-gray-800 text-white text-center p-4 text-sm shadow-inner">
+            <p>&copy; 2024 Hyperverge</p>
+        </footer>
